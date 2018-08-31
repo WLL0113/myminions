@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>小黄人制作</title>
+	<style type="text/css">
+	
+	.content
+	{
+		position: fixed;
+		padding: 100px;
+		border: 5px solid black;
+		overflow: hidden;
+	}
+		.body 
+		{
+			position: relative;
+			overflow: hidden;
+			z-index: 99;
+			margin:0 auto;
+			height: 330px;
+			width: 200px; 
+			border: 5px solid black;
+			border-radius: 100px 100px 75px 75px;
+			background: #ffff66;
+		}
+			.line
+			{
+				position: absolute;
+				margin: 90px 0 ;
+				height: 15px;
+				width: 205px;
+				background:black;
+			}
+			.left-eye
+			{
+				position: absolute;
+				height: 70px;
+				width: 70px;
+				margin: 60px 20px;
+				background: #fff;
+				border: 5px solid black;
+				border-radius: 50px;
+			}
+				.eyeb
+				{
+					height: 40px;
+					width: 40px;
+					margin: 10px;
+					border-radius: 40px;
+					background:black;
+				}
+			.right-eye
+			{
+				position: absolute;
+				height: 70px;
+				width: 70px;
+				margin: 60px 100px;
+				background: #fff;
+				border: 5px solid black;
+				border-radius: 50px;
+			}
+				.eyeb
+				{
+					height: 40px;
+					width: 40px;
+					margin: 10px;
+					border-radius: 40px;
+					background:black;
+				}
+			.mouth
+			{
+				position: absolute;
+				height: 20px;
+				width: 30px;
+				background: #fff;
+				border: 5px solid black;
+				border-radius: 30px;
+				margin: 150px 80px;
+			}
+			.mouthcover
+			{
+				position: absolute;
+				height: 10px;
+				width: 40px;
+				background: #ffff66;
+				border-bottom: 5px solid black;
+				margin: 150px 80px;
+			}
+			.pant
+			{
+				position: absolute;
+				background: #0066cc;
+				border-top: 5px solid black;
+				margin: 255px 0 ;
+				width: 200px;
+				height: 150px;
+			}
+			.hand-l-body
+			{
+				position: absolute;
+				z-index: 1;
+				width: 15px;
+				height: 100px;
+				margin: -150px -30px;
+				background: yellow;
+				border-radius: 20px;
+				transform: rotate(40deg);
+				border: 5px solid black;
+				
+			}
+
+			.pantline-l
+			{
+				position: absolute;
+				z-index: 1;
+				background: #0066cc;
+				border: 5px solid black;
+				margin: 148px 10px;
+				width: 13px;
+				height: 90px;
+				transform: rotate(-65deg);
+			}
+				.dot-l
+				{
+					position: absolute;
+					z-index: 2;
+					padding: 4px;
+					margin: 80px 2px;
+					background: black;
+					border-radius: 5px;
+				}
+			.pantline-r
+			{
+				position: absolute;
+				z-index: 1;
+				background: #0066cc;
+				border: 5px solid black;
+				margin: 148px 170px;
+				width: 13px;
+				height: 90px;
+				transform: rotate(65deg);
+			}
+				.dot-r
+					{
+						position: absolute;
+						z-index: 2;
+						padding: 4px;
+						margin: 80px 2px;
+						background: black;
+						border-radius: 5px;
+					}
+				.pantlogo
+				{
+					position: absolute;
+					background: #0066cc;
+					margin-top: 205px;
+					margin-left: 50px ;
+					width: 100px;
+					height: 100px;
+					
+				}
+					.pantpak
+					{
+						
+						border-radius: 20px;
+						margin: 15px 25px;
+						border: 5px dashed black;
+						padding: 20px;
+					}
+					.pantpakcover
+					{
+						position: absolute;
+						margin: 10px 25px;
+				
+						border-bottom: 5px dashed black;
+						width: 50px;
+						height: 20px;
+						background: #0066cc;
+					}
+				.panttop
+				{
+					background: #0066cc;
+					margin-top: 200px;
+					margin-left:  45px ;
+					width: 100px;
+					height: 100px;
+					border: 5px solid black;
+				}
+
+		.pantleg-l-body
+			{
+				position: absolute;
+				overflow: hidden;
+				margin: -15px 50px;
+				border: 5px solid black;
+				border-bottom: none;
+				border-left: none; 
+				width: 40px;
+				height: 40px;
+				background: #0066cc;
+
+			}
+			.pantleg-l-body-cover
+			{
+				position: absolute;
+				width: 15px;
+				height: 40px;
+				background: #fff;
+				border: 5px solid black;
+				margin-left: -13px;
+				transform: rotate(-18deg);
+			}
+		.pantleg-r-body
+			{
+				position: absolute;
+				overflow: hidden;
+				margin: -15px 120px;
+				border: 5px solid black;
+				border-bottom: none;
+				border-right: none; 
+				width: 40px;
+				height: 40px;
+				background: #0066cc;
+
+			}
+			.pantleg-r-body-cover
+			{
+				position: absolute;
+				width: 15px;
+				height: 40px;
+				background: #fff;
+				border: 5px solid black;
+				margin-left: 28px;
+
+				transform: rotate(18deg);
+			}		
+		.shoe-l
+		{
+			position: absolute;
+			width: 55px;
+			height: 20px;
+			background: #000;
+			border-radius: 13px 2px 5px 5px;
+			margin: 30px 40px ;
+		}	
+		.shoe-r
+		{
+			position: absolute;
+			width: 55px;
+			height: 20px;
+			background: #000;
+			border-radius: 2px 13px 5px 5px;
+			margin: 30px 120px ;
+		}	
+}
+		
+</style>
+</head>
+
+<body>
+<div class="cup">
+	<div class="content">
+		<!--身体-->
+		<div class="body">
+			<!--眼睛旁边的线-->
+			<div class="line"></div>
+			<!--眼睛-->
+			<div class="left-eye"><div class="eyeb"></div></div>
+			<div class="right-eye"><div class="eyeb"></div></div>
+			<!--嘴-->
+			<div class="mouth"></div>
+			<div class="mouthcover"></div>
+			<!--裤子-->
+			<!--背带裤袋子-->
+			<div class="pantline-l">
+				<div class="dot-l"></div>
+			</div>
+			<div class="pantline-r">
+				<div class="dot-r"></div>
+			</div>
+			<!--裤子下方-->
+				<div class="pant"></div>
+					<!--裤子方块部分-->
+					<div class="pantlogo">
+						<div class="pantpakcover"></div>
+						<div class="pantpak"></div>
+					</div>
+					<div class="panttop"></div>	
+			
+				</div>
+		<!--手-->
+		<div class="hand-l">
+			<div class="hand-l-body"></div>
+			<div class="hand-l-palm">
+				<div class="hand-l-palm-body"></div>
+				<div class="hand-l-palm-finger1"></div>
+				<div class="hand-l-palm-finger2"></div>
+				<div class="hand-l-palm-finger3"></div>
+			</div>
+		</div>
+		<div class="hand-r">
+			<div class="hand-r-body"></div>
+			<div class="hand-r-palm">
+				<div class="hand-r-palm-body"></div>
+				<div class="hand-r-palm-finger1"></div>
+				<div class="hand-r-palm-finger2"></div>
+				<div class="hand-r-palm-finger3"></div>
+			</div>
+		</div>
+		<!--腿子-->	<!--鞋子-->
+		<div class="Tui">
+			<div class="pantleg-l">
+				<div class="pantleg-l-body">
+					<div class="pantleg-l-body-cover"></div>
+				</div>
+				<div class=shoe-l></div>
+			</div>
+			<div class="pantleg-r">
+				<div class="pantleg-r-body">
+					<div class="pantleg-r-body-cover"></div>
+				</div>
+				<div class=shoe-r></div>
+			</div>
+		</div>
+	</div>
+</div>
+	
+		
+	
+</div>
+</body>
+
+</html>
