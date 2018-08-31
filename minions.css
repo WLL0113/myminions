@@ -1,363 +1,479 @@
-.content
-	{
-		position: fixed;
-		padding: 100px;
-		border: 5px solid black;
-		overflow: hidden;
-	}
 
- /*--------------------身体--------------------------*/
-		.body 
-		{
-			position: relative;
-			overflow: hidden;
-			z-index: 99;
-			margin:0 auto;
-			height: 330px;
-			width: 200px; 
-			border: 5px solid black;
-			border-radius: 100px 100px 75px 75px;
-			background: #ffff66;
-		}
-			.line
+		.content
 			{
 				position: absolute;
-				margin: 90px 0 ;
-				height: 15px;
-				width: 205px;
-				background:black;
-			}
-
- /*--------------------眼睛--------------------------*/
-			.left-eye
-			{
-				position: absolute;
-				height: 70px;
-				width: 70px;
-				margin: 60px 20px;
-				background: #fff;
+				padding: 130px;
 				border: 5px solid black;
-				border-radius: 50px;
-			}
-				.eyeb
-				{
-					height: 40px;
-					width: 40px;
-					margin: 10px;
-					border-radius: 40px;
-					background:black;
-				}
-			.right-eye
-			{
-				position: absolute;
-				height: 70px;
-				width: 70px;
-				margin: 60px 100px;
-				background: #fff;
-				border: 5px solid black;
-				border-radius: 50px;
-			}
-				.eyeb
-				{
-					height: 40px;
-					width: 40px;
-					margin: 10px;
-					border-radius: 40px;
-					background:black;
-				}
-
- /*--------------------嘴--------------------------*/
-			.mouth
-			{
-				position: absolute;
-				height: 20px;
-				width: 30px;
-				background: #fff;
-				border: 5px solid black;
-				border-radius: 30px;
-				margin: 150px 80px;
-			}
-			.mouthcover
-			{
-				position: absolute;
-				height: 10px;
-				width: 40px;
-				background: #ffff66;
-				border-bottom: 5px solid black;
-				margin: 150px 80px;
+				margin: auto;
 			}
 
- /*--------------------裤子--------------------------*/
-			.pant
-			{
-				position: absolute;
-				background: #0066cc;
-				border-top: 5px solid black;
-				margin: 255px 0 ;
-				width: 200px;
-				height: 150px;
-			}
-
-			.pantline-l
-			{
-				position: absolute;
-				z-index: 1;
-				background: #0066cc;
-				border: 5px solid black;
-				margin: 148px 10px;
-				width: 13px;
-				height: 90px;
-				transform: rotate(-65deg);
-			}
-				.dot-l
+				.hair
 				{
 					position: absolute;
-					z-index: 2;
-					padding: 4px;
-					margin: 80px 2px;
-					background: black;
-					border-radius: 5px;
+					width: 20px;
+					height: 50px;
+					border: 5px solid black;
+					margin-top: -40px;
+					margin-left: 100px;
+					border-right: none;
+					border-radius: 50px 0 0 0;
+					transform-origin: 50% 500%;
+					animation: bodymove 1.5s infinite;
 				}
-			.pantline-r
-			{
-				position: absolute;
-				z-index: 1;
-				background: #0066cc;
-				border: 5px solid black;
-				margin: 148px 170px;
-				width: 13px;
-				height: 90px;
-				transform: rotate(65deg);
-			}
-				.dot-r
+				.hair1
+				{
+					position: absolute;
+					width: 20px;
+					height: 50px;
+					border: 5px solid black;
+					margin-top: -40px;
+					margin-left: 115px;
+					border-right: none;
+					border-radius: 50px 0 0 0;
+					transform-origin: 50% 500%;
+					animation: bodymove 1.5s infinite;
+				}
+				.hair2
+				{
+					position: absolute;
+					width: 20px;
+					height: 50px;
+					border: 5px solid black;
+					margin-top: -40px;
+					margin-left: 85px;
+					border-right: none;
+					border-radius: 50px 0 0 0;
+					transform-origin: 50% 500%;
+					animation: bodymove 1.5s infinite;
+				}
+			
+				@keyframes bodymove 
+				{
+					0% {transform: rotate(15deg);}
+					50% {transform: rotate(-15deg);}
+					100% {transform: rotate(15deg);}
+
+				}
+		 /*-------------------身体--------------------------*/
+				.body 
+				{
+					position: relative;
+					overflow: hidden;
+					z-index: 99;
+					margin:0 auto;
+					height: 330px;
+					width: 200px; 
+					border: 5px solid black;
+					border-radius: 100px 100px 75px 75px;
+					background: #ffff66;
+					transform-origin: 50% 100%;
+					animation: bodymove 1.5s infinite;
+				}
+				@keyframes bodymove 
+				{
+					0% {transform: rotate(2deg);}
+					50% {transform: rotate(-2deg);}
+					100% {transform: rotate(2deg);}
+
+				}
+					.line
 					{
 						position: absolute;
-						z-index: 2;
-						padding: 4px;
-						margin: 80px 2px;
-						background: black;
-						border-radius: 5px;
+						margin: 90px 0 ;
+						height: 15px;
+						width: 205px;
+						background:black;
 					}
-				.pantlogo
-				{
-					position: absolute;
-					background: #0066cc;
-					margin-top: 205px;
-					margin-left: 50px ;
-					width: 100px;
-					height: 100px;
-					
-				}
-					.pantpak
+
+		 /*--------------------眼睛--------------------------*/
+					.left-eye
 					{
+						position: absolute;
+						height: 70px;
+						width: 70px;
+						margin: 60px 20px;
+						background: #fff;
+						border: 5px solid black;
+						border-radius: 50px;
+					}
+
+					.right-eye
+					{
+						position: absolute;
+						height: 70px;
+						width: 70px;
+						margin: 60px 100px;
+						background: #fff;
+						border: 5px solid black;
+						border-radius: 50px;
+					}
+
+						.eyeb
+						{
+							position: absolute;
+							height: 40px;
+							width: 40px;
+							margin: 5px;
+							border-radius: 40px;
+							background:black;
+							animation: eyebmove 9s infinite;
+						}
+						@keyframes eyebmove
+						{
+							0% {left: 0px; top: 0px;}
+							10% {left: -5px; top: 8px;}
+							20% {left: 0px; top: 18px; }
+							30% {left: 10px; top: 24px; }
+							40% {left: 20px; top: 18px; }
+							50% {left: 24px; top: 8px; }
+							60% {left: 20px; top: 0px; }
+							70% {left: 10px; top: -4px; }
+							80% {left: 4px; top: -2px; }
+							90% {left: 3px; top: -1px; }
+							90% {left: 0px; top: 0px; }
 						
-						border-radius: 20px;
-						margin: 15px 25px;
-						border: 5px dashed black;
-						padding: 20px;
-					}
-					.pantpakcover
+						
+						}
+						
+
+		 /*--------------------嘴--------------------------*/
+					.mouth
 					{
 						position: absolute;
-						margin: 10px 25px;
-				
-						border-bottom: 5px dashed black;
-						width: 50px;
 						height: 20px;
-						background: #0066cc;
+						width: 30px;
+						background: #fff;
+						border: 5px solid black;
+						border-radius: 30px;
+						margin: 150px 80px;
 					}
-				.panttop
-				{
-					background: #0066cc;
-					margin-top: 200px;
-					margin-left:  45px ;
-					width: 100px;
-					height: 100px;
-					border: 5px solid black;
-				}
+					.mouthcover
+					{
+						position: absolute;
+						height: 10px;
+						width: 40px;
+						background: #ffff66;
+						border-bottom: 5px solid black;
+						margin: 150px 80px;
+					}
 
-		.pantleg-l-body
-			{
-				position: absolute;
-				overflow: hidden;
-				margin: -15px 50px;
-				border: 5px solid black;
-				border-bottom: none;
-				border-left: none; 
-				width: 40px;
-				height: 40px;
-				background: #0066cc;
+		 /*--------------------裤子--------------------------*/
+					.pant
+					{
+						position: absolute;
+						background: #0066cc;
+						border-top: 5px solid black;
+						margin: 255px 0 ;
+						width: 200px;
+						height: 150px;
+					}
 
-			}
-			.pantleg-l-body-cover
-			{
-				position: absolute;
-				width: 15px;
-				height: 40px;
-				background: #fff;
-				border: 5px solid black;
-				margin-left: -13px;
-				transform: rotate(-18deg);
-			}
-		.pantleg-r-body
-			{
-				position: absolute;
-				overflow: hidden;
-				margin: -15px 120px;
-				border: 5px solid black;
-				border-bottom: none;
-				border-right: none; 
-				width: 40px;
-				height: 40px;
-				background: #0066cc;
+					.pantline-l
+					{
+						position: absolute;
+						z-index: 1;
+						background: #0066cc;
+						border: 5px solid black;
+						margin: 148px 10px;
+						width: 13px;
+						height: 90px;
+						transform: rotate(-65deg);
+					}
+						.dot-l
+						{
+							position: absolute;
+							z-index: 2;
+							padding: 4px;
+							margin: 80px 2px;
+							background: black;
+							border-radius: 5px;
+						}
+					.pantline-r
+					{
+						position: absolute;
+						z-index: 1;
+						background: #0066cc;
+						border: 5px solid black;
+						margin: 148px 170px;
+						width: 13px;
+						height: 90px;
+						transform: rotate(65deg);
+					}
+						.dot-r
+							{
+								position: absolute;
+								z-index: 2;
+								padding: 4px;
+								margin: 80px 2px;
+								background: black;
+								border-radius: 5px;
+							}
+						.pantlogo
+						{
+							position: absolute;
+							background: #0066cc;
+							margin-top: 205px;
+							margin-left: 50px ;
+							width: 100px;
+							height: 100px;
+							
+						}
+							.pantpak
+							{
+								
+								border-radius: 20px;
+								margin: 15px 25px;
+								border: 5px dashed black;
+								padding: 20px;
+							}
+							.pantpakcover
+							{
+								position: absolute;
+								margin: 10px 25px;
+						
+								border-bottom: 5px dashed black;
+								width: 50px;
+								height: 20px;
+								background: #0066cc;
+							}
+						.panttop
+						{
+							background: #0066cc;
+							margin-top: 200px;
+							margin-left:  45px ;
+							width: 100px;
+							height: 100px;
+							border: 5px solid black;
+						}
 
-			}
-			.pantleg-r-body-cover
-			{
-				position: absolute;
-				width: 15px;
-				height: 40px;
-				background: #fff;
-				border: 5px solid black;
-				margin-left: 28px;
+				.pantleg-l-body
+					{
+						position: absolute;
+						overflow: hidden;
+						margin: -15px 50px;
+						border: 5px solid black;
+						border-bottom: none;
+						border-left: none; 
+						width: 40px;
+						height: 40px;
+						background: #0066cc;
 
-				transform: rotate(18deg);
-			}
+					}
+					.pantleg-l-body-cover
+					{
+						position: absolute;
+						width: 15px;
+						height: 40px;
+						background: #fff;
+						border: 5px solid black;
+						margin-left: -13px;
+						transform: rotate(-18deg);
+					}
+				.pantleg-r-body
+					{
+						position: absolute;
+						overflow: hidden;
+						margin: -15px 120px;
+						border: 5px solid black;
+						border-bottom: none;
+						border-right: none; 
+						width: 40px;
+						height: 40px;
+						background: #0066cc;
 
-/*--------------------鞋--------------------------*/		
-		.shoe-l
-		{
-			position: absolute;
-			width: 55px;
-			height: 20px;
-			background: #000;
-			border-radius: 13px 2px 5px 5px;
-			margin: 30px 40px ;
-		}	
-		.shoe-r
-		{
-			position: absolute;
-			width: 55px;
-			height: 20px;
-			background: #000;
-			border-radius: 2px 13px 5px 5px;
-			margin: 30px 120px ;
-		}	
+					}
+					.pantleg-r-body-cover
+					{
+						position: absolute;
+						width: 15px;
+						height: 40px;
+						background: #fff;
+						border: 5px solid black;
+						margin-left: 28px;
 
- /*--------------------手--------------------------*/
-		.hand-l-body
-			{
-				position: absolute;
-				z-index: 1;
-				width: 15px;
-				height: 100px;
-				margin: -150px -30px;
-				background: yellow;
-				border-radius: 20px;
-				transform: rotate(40deg);
-				border: 5px solid black;
-				
-			}
-				.hand-l-palm-body
+						transform: rotate(18deg);
+					}
+
+		/*--------------------鞋--------------------------*/		
+				.shoe-l
 				{
 					position: absolute;
-					z-index: 1;
-					width: 25px;
-					height: 25px;
-					background: #111;
-					border-radius: 5px 5px 20px 20px;
-					margin: -70px -70px;
-					transform: rotate(40deg);
-					border: 5px solid black;
+					width: 55px;
+					height: 20px;
+					background: #000;
+					border-radius: 13px 2px 5px 5px;
+					margin: 30px 40px ;
+					animation: shoeleft 0.8s infinite;
+					transform-origin: 100% 0%;
+				}	
+					@keyframes shoeleft
+				{
+					0% {transform: rotate(0deg);}
+					20% {transform: rotate(10deg);}
+					40% {transform: rotate(20deg);}
+					60% {transform: rotate(25deg);}
+					80% {transform: rotate(20deg);}
+					90% {transform: rotate(10deg);}
+					100% {transform: rotate(0deg);}
 				}
-				.hand-l-palm-finger1
+				.shoe-r
 				{
 					position: absolute;
-					
-					width: 17px;
-					height: 30px;
-					margin: -70px -80px;
-					border-radius: 5px 5px 10px 10px;
-					background: black;
-					transform: rotate(80deg);
-				}
-				.hand-l-palm-finger2
-				{
-					position: absolute;
-					
-					width: 17px;
-					height: 30px;
-					margin: -50px -75px;
-					border-radius: 5px 5px 10px 10px;
-					background: black;
-					transform: rotate(45deg);
-				}
-				.hand-l-palm-finger3
-				{
-					position: absolute;
-					
-					width: 17px;
-					height: 30px;
-					margin: -45px -55px;
-					border-radius: 5px 5px 10px 10px;
-					background: black;
-				
-				}
-			.hand-r-body
-			{
-				position: absolute;
-				z-index: 1;
-				width: 15px;
-				height: 100px;
-				margin: -150px 215px;
-				background: yellow;
-				border-radius: 20px;
-				transform: rotate(-40deg);
-				border: 5px solid black;
-				
-			}
-				.hand-r-palm-body
-				{
-					position: absolute;
-					z-index: 1;
-					width: 25px;
-					height: 25px;
-					background: black;
-					border-radius: 5px 5px 20px 20px;
-					margin: -73px 245px;
-					transform: rotate(-40deg);
-					border: 5px solid black;
-				}
-				.hand-r-palm-finger1
-				{
-					position: absolute;
-					
-					width: 17px;
-					height: 30px;
-					margin: -70px 275px;
-					border-radius: 5px 5px 10px 10px;
-					background: black;
-					transform: rotate(-80deg);
-				}
-				.hand-r-palm-finger2
-				{
-					position: absolute;
-					
-					width: 17px;
-					height: 30px;
-					margin: -50px 270px;
-					border-radius: 5px 5px 10px 10px;
-					background: black;
-					transform: rotate(-45deg);
-				}
-				.hand-r-palm-finger3
-				{
-					position: absolute;
-					
-					width: 17px;
-					height: 30px;
-					margin: -50px 250px;
-					border-radius: 5px 5px 10px 10px;
-					background: black;
-				
-				}
+					width: 55px;
+					height: 20px;
+					background: #000;
+					border-radius: 2px 13px 5px 5px;
+					margin: 30px 120px ;
+				}	
+
+		 /*--------------------手--------------------------*/
+
+		 	.hand-l
+		 	{
+		 		position: absolute;
+				width: 70px;
+				height: 170px;
+				margin:-160px -20px;
+				animation: handleft 3s infinite;
+				transform-origin: 50% 20%;
+		 	}
+		 	@keyframes handleft
+		 	{
+		 		0% {transform: rotate(45deg);}
+		 		25% {transform: rotate(90deg);}
+		 		50% {transform: rotate(125deg);}
+		 		75% {transform: rotate(90deg);}
+		 		100% {transform: rotate(45deg);}
+		 	}
+		 	
+				.hand-l-body
+					{
+						position: absolute;
+						z-index: 1;
+						width: 15px;
+						height: 100px;
+						margin: 20px;
+						background:  #ffff66;
+						border-radius: 20px;
+						border: 5px solid black;
+						
+					}
+						.hand-l-palm-body
+						{
+							position: absolute;
+							z-index: 1;
+							width: 25px;
+							height: 25px;
+							background: #111;
+							border-radius: 5px 5px 20px 20px;
+							margin: 120px 0 0 15px;
+							border: 5px solid black;
+						}
+						.hand-l-palm-finger1
+						{
+							position: absolute;
+							
+							width: 17px;
+							height: 30px;
+							margin: 134px 0px 0px 10px;
+							border-radius: 5px 5px 10px 10px;
+							background: black;
+							transform: rotate(35deg);
+						}
+						.hand-l-palm-finger2
+						{
+							position: absolute;
+							width: 17px;
+							height: 30px;
+							margin: 140px 0px 0px 25px;
+							border-radius: 5px 5px 10px 10px;
+							background: black;
+			
+						}
+						.hand-l-palm-finger3
+						{
+							position: absolute;
+							
+							width: 17px;
+							height: 30px;
+							margin: 135px 0px 0px 40px;
+							border-radius: 5px 5px 10px 10px;
+							background: black;
+							transform: rotate(-30deg);
+						
+						}
+				.hand-r
+		 	{
+		 		position: absolute;
+				width: 70px;
+				height: 170px;
+				margin: -165px 160px;
+				animation: handright 3s infinite;
+				transform-origin: 50% 20%;
+		 	}
+		 	@keyframes handright
+		 	{
+		 		0% {transform: rotate(-45deg);}
+		 		25% {transform: rotate(-90deg);}
+		 		50% {transform: rotate(-125deg);}
+		 		75% {transform: rotate(-90deg);}
+		 		100% {transform: rotate(-45deg);}
+		 	}
+					.hand-r-body
+					{
+						position: absolute;
+						z-index: 1;
+						width: 15px;
+						height: 100px;
+						margin: 20px;
+						background:  #ffff66;
+						border-radius: 20px;
+						border: 5px solid black;
+						
+					}
+						.hand-r-palm-body
+						{
+							position: absolute;
+							z-index: 1;
+							width: 25px;
+							height: 25px;
+							background: black;
+							border-radius: 5px 5px 20px 20px;
+							margin: 120px 0 0 15px;
+							
+							border: 5px solid black;
+						}
+						.hand-r-palm-finger1
+						{
+							position: absolute;
+							width: 17px;
+							height: 30px;
+							margin: 134px 0px 0px 10px;
+							border-radius: 5px 5px 10px 10px;
+							background: black;
+							transform: rotate(35deg);
+						}
+						.hand-r-palm-finger2
+						{
+							position: absolute;
+							
+							width: 17px;
+							height: 30px;
+							margin: 140px 0px 0px 25px;
+							border-radius: 5px 5px 10px 10px;
+							background: black;
+							
+						}
+						.hand-r-palm-finger3
+						{
+							position: absolute;
+							
+							width: 17px;
+							height: 30px;
+							margin: 135px 0px 0px 40px;
+							border-radius: 5px 5px 10px 10px;
+							background: black;
+							transform: rotate(-30deg);
+						}
+		 	}
+		 	}
