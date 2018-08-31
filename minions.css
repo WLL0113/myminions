@@ -1,11 +1,20 @@
 
-		.content
+			.content
 			{
 				position: absolute;
 				padding: 130px;
 				border: 5px solid black;
 				margin: auto;
+				background: #000;
+				animation: bgColor 3s infinite;
 			}
+			@keyframes bgColor
+			{
+				0% {background: #F0F8FF;}
+				50% {background: #87CEEB;}
+				100% {background: #ADD8E6;}
+			} 
+			
 
 				.hair
 				{
@@ -283,6 +292,7 @@
 						height: 40px;
 						background: #fff;
 						border: 5px solid black;
+						animation: bgColor 3s infinite;
 						margin-left: -13px;
 						transform: rotate(-18deg);
 					}
@@ -302,12 +312,13 @@
 					.pantleg-r-body-cover
 					{
 						position: absolute;
+						z-index: 0.5;
 						width: 15px;
 						height: 40px;
-						background: #fff;
+						background: #000;
+						animation: bgColor 3s infinite;
 						border: 5px solid black;
 						margin-left: 28px;
-
 						transform: rotate(18deg);
 					}
 
