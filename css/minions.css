@@ -121,14 +121,6 @@ button {
 	animation: tongue 2s infinite;
 }
 
-#eyeb-move {
-	animation: eyebmove 2s infinite;
-}
-
-#shoe-l-move {			
-	animation: shoeleft 0.8s infinite;
-}
-
 #hand-l-move {
 	animation: handleft 3s infinite;
 }

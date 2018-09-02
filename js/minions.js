@@ -1,31 +1,35 @@
 
-	var eyemove = document.getElementById("btn1");
-	eyemove.onclick = function(){
+	var btn1 = document.getElementById("btn1");
+	btn1.onclick = function(){
 	// eyemove button
-		alert("dddd");
+	var count = 0;
+	var eyebmove1 = document.getElementById("eyeb1-move");
+	var eyebmove2 = document.getElementById("eyeb2-move");
+		if(isclick = true){
+			count++
+			setTimeout(function() {
+				eyebmove1.style.cssText = "animation: eyebmove 1s;";
+				eyebmove2.style.cssText = "animation: eyebmove 1s;";
+			},0);
+		}
+		
+		if( count == 1){
+			count--
+			eyebmove1.style.cssText = "";
+			eyebmove2.style.cssText = "";
+		}
 	};
 
 
-	var drink = document.getElementById("btn2");
-	drink.onclick = function(){
+	var btn2 = document.getElementById("btn2");
+	btn2.onclick = function(){
 	// drink button
-		alert("dddd");
+		var shoe = document.getElementById("shoe-l-move");
+				shoe.style.cssText = "animation: shoeleft 0.5s ;"
+
+
 	};
 
-
-
-	var tongues = document.getElementById("btn3");
-	tongues.onclick = function(){
-	// tongues button
-		alert("dddd");
-	};
-
-
-	var bg = document.getElementById("btn4");
-	bg.onclick = function(){
-	// bg button
-		alert("dddd");
-	};
 
 
 
