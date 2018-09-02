@@ -2,34 +2,37 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>小黄人制作</title>
-	<link rel="styleSheet" href="./css/minions.css" type="text/css">
+	<link rel="styleSheet" href="./css/minions.css" type="text/css">	
 </head>
 
 <body>
 	<div class="cup">
-		<h3>点击按钮试试：</h3>
-		<button id="btn1">眼睛</button>
-		<button id="btn2">易拉罐</button>
-		<button id="btn3">舌头</button>
-		<button id="btn4">背景色</button>
-		<p></p>
-		<div class="content">
+			<div class="play">
+				<h2>点击按钮试试：</h2>
+				<button id="btn1">眼睛</button>
+				<button id="btn2">脚</button>
+				<button id="btn3">身子</button>
+				<button id="btn4">舌头</button>
+				<button id="btn5">背景色</button>
+			</div>
+		<div class="content" id="content-move">
 			<!--头毛-->
-			<div class="hair"></div>
-			<div class="hair1"></div>
-			<div class="hair2"></div>
+			<div class="hair" id="hair-move"></div>
+			<div class="hair1" id="hair1-move"></div>
+			<div class="hair2" id="hair2-move"></div>
 			<!--身体-->
-			<div class="body">
+			<div class="body" id="body-move">
 				<!--眼睛旁边的线-->
 				<div class="line"></div>
 				<!--眼睛-->
-				<div class="left-eye"><div class="eyeb"></div></div>
-				<div class="right-eye"><div class="eyeb"></div></div>
+				<div class="left-eye"><div class="eyeb" id="eyeb-move"></div></div>
+				<div class="right-eye"><div class="eyeb" id="eyeb-move"></div></div>
 				<!--嘴-->
 				<div class="Mouth">
 				<div class="mouth"></div>
-				<div class="tongue"></div>
+				<div class="tongue" id="tongue-move"></div>
 				<div class="mouthcover"></div>
 				</div>
 				<!--裤子-->
@@ -51,7 +54,7 @@
 				
 					</div>
 			<!--手-->
-			<div class="hand-l">
+			<div class="hand-l" id="hand-l-move">
 				<div class="hand-l-body"></div>
 				<div class="hand-l-palm">
 					<div class="hand-l-palm-body"></div>
@@ -60,7 +63,7 @@
 					<div class="hand-l-palm-finger3"></div>
 				</div>
 			</div>
-			<div class="hand-r">
+			<div class="hand-r" id="hand-r-move">
 				<div class="hand-r-body"></div>
 				<div class="hand-r-palm">
 					<div class="hand-r-palm-body"></div>
@@ -73,13 +76,13 @@
 			<div class="Tui">
 				<div class="pantleg-l">
 					<div class="pantleg-l-body">
-						<div class="pantleg-l-body-cover"></div>
+						<div class="pantleg-l-body-cover" id="pantleg-l-body-cover-move"></div>
 					</div>
-					<div class=shoe-l></div>
+					<div class=shoe-l id="shoe-l-move"></div>
 				</div>
 				<div class="pantleg-r">
 					<div class="pantleg-r-body">
-						<div class="pantleg-r-body-cover"></div>
+						<div class="pantleg-r-body-cover" id="pantleg-r-body-cover-move"></div>
 					</div>
 					<div class=shoe-r></div>
 				</div>
