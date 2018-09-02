@@ -122,7 +122,7 @@ button {
 }
 
 #eyeb-move {
-	animation: eyebmove 9s infinite;
+	animation: eyebmove 2s infinite;
 }
 
 #shoe-l-move {			
@@ -159,16 +159,8 @@ button {
 
 @keyframes eyebmove {
 	0% {left: 0px; top: 0px;}
-	10% {left: -5px; top: 8px;}
-	20% {left: 0px; top: 18px; }
-	30% {left: 10px; top: 24px; }
-	40% {left: 20px; top: 18px; }
 	50% {left: 24px; top: 8px; }
-	60% {left: 20px; top: 0px; }
-	70% {left: 10px; top: -4px; }
-	80% {left: 4px; top: -2px; }
-	90% {left: 3px; top: -1px; }
-	90% {left: 0px; top: 0px; }
+	100% {left: 0px; top: 0px; }
 
 }
 
