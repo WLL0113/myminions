@@ -1,7 +1,7 @@
 .content,
 .hair,.hair1,.hair2,
 .left-eye,.right-eye,.eyeb,
-.mouth,.mouthcover,.tongue,
+.mouth,.mouthcover,
 .pant,.pantline-l,.pantline-r,.dot-l,.dot-r,
 .pantlogo,.pantpakcover,.pantleg-l-body,.pantleg-l-body-cover,
 .pantleg-r-body,.pantleg-r-body-cover,
@@ -15,8 +15,9 @@
 { position: absolute; }
 
 button {
-	width: 70px;
-	height: 30px;
+	width: 150px;
+	height: 40px;
+	margin: 10px;
 	background: #fff;
 	border-radius: 5px;
 	font-weight: bold;
@@ -27,7 +28,7 @@ button {
 .content,.hair,.hair1,.hair2,
 .body,
 .left-eye,.right-eye,
-.mouth,.tongue,
+.mouth,
 .pantline-l,.pantline-r,.pantleg-l-body,.pantleg-l-body-cover,.pantleg-r-body,.pantleg-r-body-cover,.panttop,
 .hand-l-body,.hand-r-body,.hand-l-palm-body,.hand-r-palm-body
 { border: 5px solid black; }
@@ -42,6 +43,11 @@ button {
 .panttop,.pantline-l,.pantline-r,
 .pantleg-l-body,.pantleg-r-body {
 	background: #0066cc;
+}
+
+/*背景色*/
+.pantleg-l-body-cover,.pantleg-r-body-cover,.content {
+	background: #fff;
 }
 
 .hair,.hair1,.hair2 {
@@ -78,7 +84,6 @@ button {
 .pantleg-l-body-cover,.pantleg-r-body-cover {
 	width: 15px;
 	height: 40px;
-	background: #000;
 	
 }
 
@@ -106,7 +111,7 @@ button {
 /*动画加入*/
 
 #content-move,#pantleg-l-body-cover-move,#pantleg-r-body-cover-move {
-	animation: bgColor 3s infinite;
+	
 }
 
 #hair-move,#hair1-move,#hair2-move {
@@ -119,14 +124,6 @@ button {
 
 #tongue-move {
 	animation: tongue 2s infinite;
-}
-
-#hand-l-move {
-	animation: handleft 3s infinite;
-}
-
-#hand-r-move {
-	animation: handright 3s infinite;
 }
 
 /*动画调整*/
@@ -156,34 +153,20 @@ button {
 
 }
 
-@keyframes tongue {
-	0% {top:0px; opacity: 0;}
-	50% {top:9px; opacity: 1;}
-	100% {top:0px; opacity: 0;}
-}
-
 @keyframes shoeleft {
 	0% {transform: rotate(0deg);}
-	20% {transform: rotate(10deg);}
-	40% {transform: rotate(20deg);}
-	60% {transform: rotate(25deg);}
-	80% {transform: rotate(20deg);}
-	90% {transform: rotate(10deg);}
+	50% {transform: rotate(25deg);}
 	100% {transform: rotate(0deg);}
 }
 @keyframes handleft {
 	0% {transform: rotate(45deg);}
-	25% {transform: rotate(90deg);}
 	50% {transform: rotate(125deg);}
-	75% {transform: rotate(90deg);}
 	100% {transform: rotate(45deg);}
 }
 
 @keyframes handright {
 	0% {transform: rotate(-45deg);}
-	25% {transform: rotate(-90deg);}
 	50% {transform: rotate(-125deg);}
-	75% {transform: rotate(-90deg);}
 	100% {transform: rotate(-45deg);}
 }
 
@@ -191,12 +174,14 @@ button {
 /*-------------------容器--------------------------*/
 
 .play {
-	width: 400px;
-	height: 100px;
+	position: absolute;
+	margin-left: 550px;
+	display: flex;
+	flex-direction: column;
 }
 .content {
+	margin: 20px;
 	padding: 130px;
-	background: #000;
 }
 
 /*-------------------头发--------------------------*/
@@ -260,14 +245,6 @@ button {
 			margin: 150px 80px;
 		}
 
-		.tongue{
-
-			height: 20px;
-			width: 10px;
-			background: red;
-			border-radius: 30px;
-			margin: 150px 90px;
-		}
 
 		.mouthcover {
 			height: 13px;
@@ -366,11 +343,13 @@ button {
  /*--------------------手--------------------------*/
 
  	.hand-l {
-		margin:-160px -20px;
+		margin:-160px -20px; 
+		transform: rotate(45deg);
  	}
 
  	.hand-r {
 		margin: -160px 160px;
+		transform: rotate(-45deg);
  	}
 
 
