@@ -1,71 +1,88 @@
-
 	var btn1 = document.getElementById("btn1");
-	btn1.onclick = function (){
-	// eyemove button
-	var count = 0;
+	var btn2 = document.getElementById("btn2");
+	var btn3 = document.getElementById("btn3");
+	var btn4 = document.getElementById("btn4");
+	var btn5 = document.getElementById("btn5");
+	var btn6 = document.getElementById("btn6");
+	var btn7 = document.getElementById("btn7");
+	var btn8 = document.getElementById("btn8");
+
+	var content = document.getElementsByClassName("content")[0];
+	var pantlegl = document.getElementsByClassName("pantleg-l-body-cover")[0];
+	var pantlegr = document.getElementsByClassName("pantleg-r-body-cover")[0];
+
+	var hair = document.getElementById("hair-move");
+	var hair1 = document.getElementById("hair1-move");
+	var hair2 = document.getElementById("hair2-move");
+	var body = document.getElementById("body-move");
+
 	var eyebmove1 = document.getElementById("eyeb1-move");
 	var eyebmove2 = document.getElementById("eyeb2-move");
-		if(isclick = true){
-			count++;
-			setTimeout(function () {
-				eyebmove1.style.animation = "eyebmove 1.5s 2";
-				eyebmove2.style.animation = "eyebmove 1.5s 2";
-			},0);
-		}
-		
-		if( count == 1){
-			count--;
-			eyebmove1.style.animation = "";
-			eyebmove2.style.animation = "";
-		}
+
+    var shoe = document.getElementById("shoe-l-move");
+
+    var handl = document.getElementById("hand-l-move");
+	var handr = document.getElementById("hand-r-move");
+
+
+	function EndAnimation(name) {
+		//清除animation中的动画
+		name.addEventListener("animationend",function() {
+			this.style.animation = ""
+		});
+	}
+
+	function PausedMove(name){
+ 		name.style.animation = "paused"
+ 	}
+
+
+
+	btn1.onclick = function (){
+	// eyemove button
+		eyebmove1.style.animation = "eyebmove 1.5s ";
+		eyebmove2.style.animation = "eyebmove 1.5s ";
+	//结束时清空anmation 
+		EndAnimation(eyebmove1);
+		EndAnimation(eyebmove2);
 	};
 
 
-	var btn2 = document.getElementById("btn2");
+	
 	btn2.onclick= function() {
 		//shoemove button
-		var shoe = document.getElementById("shoe-l-move");
-		var count = 0;
-		if(isclick = true){
-			count++;
-			setTimeout(function () {
-			shoe.style.animation = "shoeleft 1.5s 2"
-			},0)
-		}
-		
-		if( count == 1){
-			count--;
-			shoe.style = "";
-		}
+		shoe.style.animation = "shoeleft 1.5s "
+		EndAnimation(shoe);
 	};
 
-	var btn3 = document.getElementById("btn3");
+	
 	btn3.onclick= function() {
-		var handl = document.getElementById("hand-l-move");
-		var handr = document.getElementById("hand-r-move");
-		var count = 0;
-		if(isclick = true){
-			count++
-			setTimeout(function(){
-			handl.style.animation = "handleft 1.5s 2"
-			handr.style.animation = "handright 1.5s 2"
-			},0)
-		}
+
+		handl.style.animation = "handleft 1.5s "
+		handr.style.animation = "handright 1.5s "
 		
-		if( count == 1){
-			count--
-			handl.style = ""
-			handr.style = ""
-		}
+		EndAnimation(handl);
+		EndAnimation(handr);
 	};
 
 
-	var btn4 = document.getElementById("btn4");
-	btn4.addEventListener("click",function(){
+	btn4.onclick= function() {
+
+		hair.style.animation = "hairmove 1.5s "
+		hair1.style.animation = "hairmove 1.5s "
+		hair2.style.animation = "hairmove 1.5s "
+		body.style.animation = "bodymove 1.5s "
+		
+		EndAnimation(hair);
+		EndAnimation(hair1);
+		EndAnimation(hair2);
+		EndAnimation(body);
+	};
+
+
+	
+	btn5.onclick = function () {
 		var r,g,b;
-		var content = document.getElementsByClassName("content")[0];
-		var pantlegl = document.getElementsByClassName("pantleg-l-body-cover")[0];
-		var pantlegr = document.getElementsByClassName("pantleg-r-body-cover")[0];
 
 		r = Math.floor(Math.random()*255);
 		g = Math.floor(Math.random()*255);
@@ -79,25 +96,58 @@
 			pantlegl.style.background = bgColor;
 		},0)
 
-	},false)
+	};
 
-    var btn5 = document.getElementById("btn5");
-	btn5.onclick= function() {
-		var x = document.getElementsByTagName("link")[2];
-		document.getElementById("p").innerHTML = x.innerHTML;
+    
+	btn6.onclick= function() {
+		content.onmousemove = function () {
+			//获取content内坐标
+			var x = event.clientX;
+			var y = event.clientY;
+			//控制x移动范围
+			eyebmove1.style.left = Math.floor(4*x/100) + "px" ;
+			eyebmove2.style.left = Math.floor(4*x/100) + "px" ;
+			//控制y移动范围
+			eyebmove1.style.top = Math.floor(4*y/100) + "px" ;
+			eyebmove2.style.top = Math.floor(4*y/100) + "px" ;
+
+		};
 	};
 
 
+	btn7.addEventListener("click",function(){
 
-	var btn6 = document.getElementById("btn6");
-	btn6.addEventListener("click",function(){
-		btn1.onclick();
-		btn2.onclick();
-		btn3.onclick();
-	},false);
+		eyebmove1.style.animation = "eyebmove 1.5s infinite"
+		eyebmove2.style.animation = "eyebmove 1.5s infinite"
+		shoe.style.animation = "shoeleft 1.5s infinite"
+		handl.style.animation = "handleft 1.5s infinite"
+		handr.style.animation = "handright 1.5s infinite"
+		hair.style.animation = "hairmove 1.5s infinite"
+		hair1.style.animation = "hairmove 1.5s infinite"
+		hair2.style.animation = "hairmove 1.5s infinite"
+		body.style.animation = "bodymove 1.5s infinite"
+		
+	},false)
+
+
+	btn8.onclick = function(){
+
+		PausedMove(eyebmove1)
+		PausedMove(eyebmove2)
+		PausedMove(hair)
+		PausedMove(hair1)
+		PausedMove(hair2)
+		PausedMove(body)
+		PausedMove(handr)
+		PausedMove(handl)
+		PausedMove(shoe)
+		
+		
+	};
+
 	
-
-
-
+		
+	
+	
 
 

@@ -108,41 +108,21 @@ button {
 	background: black;
 }
 
-/*动画加入*/
-
-#content-move,#pantleg-l-body-cover-move,#pantleg-r-body-cover-move {
-	
-}
-
-#hair-move,#hair1-move,#hair2-move {
-	animation: hairmove 1.5s infinite;
-}
-
-#body-move {
-	animation: bodymove 1.5s infinite;
-}
-
-#tongue-move {
-	animation: tongue 2s infinite;
-}
 
 /*动画调整*/
-@keyframes bgColor {
-	0% {background: #F0F8FF;}
-	50% {background: #87CEEB;}
-	100% {background: #ADD8E6;}
-} 
 
 @keyframes hairmove {
-	0% {transform: rotate(3deg);}
-	50% {transform: rotate(-3deg);}
-	100% {transform: rotate(3deg);}
+	0% {transform: rotate(0deg);}
+	25% {transform: rotate(-3deg);}
+	70% {transform: rotate(3deg);}
+	100% {transform: rotate(0deg);}
 }
 
 @keyframes bodymove {
-	0% {transform: rotate(2deg);}
-	50% {transform: rotate(-2deg);}
-	100% {transform: rotate(2deg);}
+	0% {transform: rotate(0deg);}
+	25% {transform: rotate(-3deg);}
+	70% {transform: rotate(3deg);}
+	100% {transform: rotate(0deg);}
 
 }
 
