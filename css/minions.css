@@ -1,4 +1,4 @@
-.content,
+.play,
 .hair,.hair1,.hair2,
 .left-eye,.right-eye,.eyeb,
 .mouth,.mouthcover,
@@ -64,6 +64,7 @@ button {
 	height: 70px;
 	width: 70px;
 	background: #fff;
+	overflow: hidden;
 	border-radius: 50px;
 }
 
@@ -152,16 +153,24 @@ button {
 
 
 /*-------------------容器--------------------------*/
+p { 
+	width: 200px;
+	height: 50px;
+	border: 1px solid black;
+
+}
 
 .play {
-	position: absolute;
-	margin-left: 550px;
+	width: 500px;
+	margin-left: 30px; 
 	display: flex;
 	flex-direction: column;
 }
 .content {
-	margin: 20px;
-	padding: 130px;
+	width: 200px;
+	height: 400px;
+	margin: 0 auto;
+	padding: 150px;
 }
 
 /*-------------------头发--------------------------*/
@@ -328,7 +337,7 @@ button {
  	}
 
  	.hand-r {
-		margin: -160px 160px;
+		margin: -160px 165px;
 		transform: rotate(-45deg);
  	}
 

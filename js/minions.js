@@ -98,22 +98,45 @@
 
 	};
 
-    
-	btn6.onclick= function() {
-		content.onmousemove = function () {
-			//获取content内坐标
-			var x = event.clientX;
-			var y = event.clientY;
-			//控制x移动范围
-			eyebmove1.style.left = Math.floor(4*x/100) + "px" ;
-			eyebmove2.style.left = Math.floor(4*x/100) + "px" ;
-			//控制y移动范围
-			eyebmove1.style.top = Math.floor(4*y/100) + "px" ;
-			eyebmove2.style.top = Math.floor(4*y/100) + "px" ;
 
-		};
-	};
 
+
+	btn6.addEventListener("click",function(){
+
+			window.onmousemove = function () {
+				//获取content内坐标
+				var x = event.clientX;
+				var y = event.clientY;
+				//手移动
+				var a,b,c,cosB,z;
+				a = Math.pow((690-x),2);
+				b = Math.pow((360-y),2);
+				c = a+b;
+				sinB = Math.sqrt(b/c)
+				//反正弦值
+				z=Math.asin(sinB);
+				//求角度
+				angleB = (z*360)/(2*Math.PI)
+
+				//控制x移动
+				eyebmove1.style.left = Math.floor(2*x/100) + "px" ;
+				eyebmove2.style.left = Math.floor(2*x/100) + "px" ;
+				//控制y移动
+				eyebmove1.style.top = Math.floor(3*y/100) + "px" ;
+				eyebmove2.style.top = Math.floor(3*y/100) + "px" ;
+
+				var rot = Math.floor(angleB)
+				if( y < 360){
+					handl.style.transform = "rotate( " + (rot+90) + "deg)"
+					handr.style.transform = "rotate( " + (-(rot+90)) + "deg)"
+				}
+				else { 
+					handl.style.transform = "rotate( " + (90-rot) + "deg)"
+					handr.style.transform = "rotate( " + (-(90-rot)) + "deg)"
+				}
+			};
+
+	},false)
 
 	btn7.addEventListener("click",function(){
 
@@ -143,8 +166,19 @@
 		PausedMove(shoe)
 		
 		
+		window.onmousemove = function () {
+				//获取content内坐标
+			eyebmove1.style.left = 10 + "px" ;
+			eyebmove2.style.left = 10 + "px" ;
+			//控制y移动范围
+			eyebmove1.style.top = 10 + "px" ;
+			eyebmove2.style.top = 10 + "px" ;
+			
+			};
+
 	};
 
+	
 	
 		
 	
