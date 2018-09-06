@@ -153,15 +153,9 @@ button {
 
 
 /*-------------------容器--------------------------*/
-p { 
-	width: 200px;
-	height: 50px;
-	border: 1px solid black;
-
-}
 
 .play {
-	width: 500px;
+	padding: 50px;
 	margin-left: 30px; 
 	display: flex;
 	flex-direction: column;

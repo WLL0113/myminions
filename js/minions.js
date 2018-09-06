@@ -24,6 +24,15 @@
     var handl = document.getElementById("hand-l-move");
 	var handr = document.getElementById("hand-r-move");
 
+	function bind(obj,eventStr,callback){
+		if(obj.addEventListener){
+			obj.addEventListener(eventStr,callback,false);
+		}else {
+			obj.attachEvent("on"+eventStr,function(){
+				callback.call(obj);
+			});
+		}
+	}
 
 	function EndAnimation(name) {
 		//清除animation中的动画
@@ -37,36 +46,35 @@
  	}
 
 
-
-	btn1.onclick = function (){
+ 	bind(btn1,"click",function (){
 	// eyemove button
 		eyebmove1.style.animation = "eyebmove 1.5s ";
 		eyebmove2.style.animation = "eyebmove 1.5s ";
 	//结束时清空anmation 
 		EndAnimation(eyebmove1);
 		EndAnimation(eyebmove2);
-	};
+	})
 
 
 	
-	btn2.onclick= function() {
+	bind(btn2,"click",function (){
 		//shoemove button
 		shoe.style.animation = "shoeleft 1.5s "
 		EndAnimation(shoe);
-	};
+	})
 
 	
-	btn3.onclick= function() {
+	bind(btn3,"click",function (){
 
 		handl.style.animation = "handleft 1.5s "
 		handr.style.animation = "handright 1.5s "
 		
 		EndAnimation(handl);
 		EndAnimation(handr);
-	};
+	})
 
 
-	btn4.onclick= function() {
+	bind(btn4,"click",function(){
 
 		hair.style.animation = "hairmove 1.5s "
 		hair1.style.animation = "hairmove 1.5s "
@@ -77,11 +85,11 @@
 		EndAnimation(hair1);
 		EndAnimation(hair2);
 		EndAnimation(body);
-	};
+	})
 
 
 	
-	btn5.onclick = function () {
+	bind(btn5,"click",function(){
 		var r,g,b;
 
 		r = Math.floor(Math.random()*255);
@@ -96,12 +104,12 @@
 			pantlegl.style.background = bgColor;
 		},0)
 
-	};
+	})
 
 
 
 
-	btn6.addEventListener("click",function(){
+	bind(btn6,"click",function(){
 
 			window.onmousemove = function () {
 				//获取content内坐标
@@ -136,9 +144,9 @@
 				}
 			};
 
-	},false)
+	})
 
-	btn7.addEventListener("click",function(){
+	bind(btn4,"click",function(){
 
 		eyebmove1.style.animation = "eyebmove 1.5s infinite"
 		eyebmove2.style.animation = "eyebmove 1.5s infinite"
@@ -150,10 +158,10 @@
 		hair2.style.animation = "hairmove 1.5s infinite"
 		body.style.animation = "bodymove 1.5s infinite"
 		
-	},false)
+	})
 
 
-	btn8.onclick = function(){
+	bind(btn8,"click",function(){
 
 		PausedMove(eyebmove1)
 		PausedMove(eyebmove2)
@@ -176,7 +184,7 @@
 			
 			};
 
-	};
+	})
 
 	
 	
