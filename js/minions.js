@@ -154,7 +154,6 @@ bind(btn7, "click", function () {
 })
 
 bind(btn8, "click", function () {
-
 	PausedMove(eyebmove1)
 	PausedMove(eyebmove2)
 	PausedMove(hair)
@@ -164,8 +163,6 @@ bind(btn8, "click", function () {
 	PausedMove(handr)
 	PausedMove(handl)
 	PausedMove(shoe)
-
-
 	window.onmousemove = function () {
 		//获取content内坐标
 		eyebmove1.style.left = 10 + "px";
@@ -173,9 +170,7 @@ bind(btn8, "click", function () {
 		//控制y移动范围
 		eyebmove1.style.top = 10 + "px";
 		eyebmove2.style.top = 10 + "px";
-
 	};
-
 })
 
 
