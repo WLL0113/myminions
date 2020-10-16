@@ -1,5 +1,7 @@
 # myminions
 
+项目预览：  https://wll0113.github.io/myminions/
+
 使用css3和js制作小黄人的动画
 
 **最终要实现身体，手，眼睛以及脚的动画。**
