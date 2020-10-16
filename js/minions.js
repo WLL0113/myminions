@@ -124,7 +124,7 @@ bind(btn7, "click", function () {
 		var x = event.clientX;
 		var y = event.clientY;
 		//手移动
-		var a, b, c, cosB, z;
+		var a, b, c, sinB, z;
 		a = Math.pow((690 - x), 2);
 		b = Math.pow((360 - y), 2);
 		c = a + b;
